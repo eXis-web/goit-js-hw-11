@@ -1,0 +1,79 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+   
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.photo-card img {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.info p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+.search-form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: blue;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    padding-top: 55px;
+}
+
+.inputText {
+    width: 280px;
+    height: 28px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+.search-button {
+    font-size: 11px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.loadmore-button {
+    margin-top: 25px;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.load-more {
+    width: 280px;
+    height: 28px;
+    color:yellow;
+    font-size: 22px;
+    background-color: blue;
+}
