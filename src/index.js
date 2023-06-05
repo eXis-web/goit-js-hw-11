@@ -9,13 +9,19 @@ const loadMoreBtn = document.querySelector('.load-more');
 
 let searchQuery = '';
 let page = 1;
+let totalPages = 0;
 
 const lightbox = new SimpleLightbox('.gallery a');
 
 searchForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    searchQuery = searchForm.elements.searchQuery.value;
+    searchQuery = searchForm.elements.searchQuery.value.trim();
+
+    if (searchQuery === '') {
+        Notiflix.Notify.warning('Please enter a search query.');
+        return;
+    }
 
     clearGallery();
     page = 1;
@@ -43,6 +49,8 @@ async function getImages(searchQuery, page) {
         if (data.hits.length === 0) {
             Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
         } else {
+            totalPages = Math.ceil(data.totalHits / perPage);
+
             data.hits.forEach(async image => {
                 const imageURL = image.webformatURL;
                 const largeImageURL = image.largeImageURL;
@@ -53,13 +61,9 @@ async function getImages(searchQuery, page) {
                 const downloads = image.downloads;
 
                 await renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments, downloads);
-
-               
             });
 
-           
-
-            if (data.totalHits <= page * perPage) {
+            if (page >= totalPages) {
                 loadMoreBtn.style.display = 'none';
                 Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
             } else {
@@ -68,17 +72,12 @@ async function getImages(searchQuery, page) {
 
             lightbox.refresh();
 
-            const { height: cardHeight } = document.querySelector(".gallery").lastElementChild.getBoundingClientRect();
-            window.scrollBy({
-                top: cardHeight * 2,
-                behavior: "smooth",
-            });
+           
         }
     } catch (error) {
         Notiflix.Notify.failure('An error occurred while fetching images. Please try again.');
     }
 }
-
 
 function renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments, downloads) {
     const photoCard = document.createElement('div');
