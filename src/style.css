@@ -6,6 +6,7 @@
 }
 
 .photo-card {
+    background-color: rgb(27, 224, 224);
     display: flex;
     flex-direction: column;
     border: 1px solid #ccc;
