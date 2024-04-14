@@ -72,7 +72,6 @@ async function getImages(searchQuery, page) {
 
             lightbox.refresh();
 
-           
         }
     } catch (error) {
         Notiflix.Notify.failure('An error occurred while fetching images. Please try again.');
