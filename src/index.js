@@ -128,3 +128,5 @@ function createInfoParagraph(label, value) {
 
     return paragraph; // Returning the created paragraph element
 }
+
+//Created with love to coding
