@@ -1,3 +1,4 @@
+/* Styles for the gallery */
 .gallery {
     padding-top: 85px;
     display: grid;
@@ -5,6 +6,7 @@
     grid-gap: 20px;
 }
 
+/* Styles for the header */
 .header {
     position: absolute;
     top: 25px;
@@ -16,10 +18,12 @@
     font-weight: bold;
 }
 
+/* Styles for text */
 body {
-        font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* Styles for photo card */
 .photo-card {
     background-color: #00b6ee;
     display: flex;
@@ -27,13 +31,16 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
     overflow: hidden;
+    border-color: #00b6ee;
 }
 
+/* Styles for image in card */
 .photo-card img {
     width: 100%;
     height: auto;
 }
 
+/* Styles for information in card */
 .info {
     padding: 10px;
     background-color: #00b6ee;
@@ -46,6 +53,7 @@ body {
     color: #666;
 }
 
+/* Styles for search form */
 .search-form {
     background-color: #007bff;
     padding: 15px;
@@ -87,6 +95,7 @@ body {
     outline: none;
 }
 
+/* Styles for load more button */
 .loadmore-button {
     margin-top: 7px;
     display: flex;
@@ -105,12 +114,13 @@ body {
     border-radius: 20px;
     margin-top: 20px;
     cursor: pointer;
-    }
+}
 
 .load-more:hover {
     background-color: #fbff00;
 }
 
+/* Styles for hover effect on photo card */
 .photo-card:hover {
     box-shadow: 0 8px 16px hwb(214 0% 21%);
     transition: box-shadow 0.3s ease;
