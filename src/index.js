@@ -1,15 +1,15 @@
-import Notiflix from 'notiflix'; // Importing Notiflix library for notifications
-import axios from 'axios'; // Importing axios library for making HTTP requests
-import SimpleLightbox from "simplelightbox"; // Importing SimpleLightbox library for image lightbox
-import "simplelightbox/dist/simple-lightbox.min.css"; // Importing CSS file for SimpleLightbox
+import Notiflix from 'notiflix';
+import axios from 'axios'; 
+import SimpleLightbox from "simplelightbox"; 
+import "simplelightbox/dist/simple-lightbox.min.css"; 
 
 const searchForm = document.querySelector('.search-form'); // Selecting the search form element
 const gallery = document.querySelector('.gallery'); // Selecting the gallery container element
 const loadMoreBtn = document.querySelector('.load-more'); // Selecting the "Load more" button element
 
-let searchQuery = ''; // Variable to store the search query
-let page = 1; // Variable to store the current page number
-let totalPages = 0; // Variable to store the total number of pages
+let searchQuery = '';
+let page = 1;
+let totalPages = 0;
 
 const lightbox = new SimpleLightbox('.gallery a'); // Initializing SimpleLightbox for the gallery images
 
