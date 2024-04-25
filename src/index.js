@@ -31,7 +31,7 @@ searchForm.addEventListener('submit', function (event) {
 
 // Event listener for the "Load more" button click
 loadMoreBtn.addEventListener('click', function () {
-    page++; // Incrementing the page number
+    page++;
     getImages(searchQuery, page); // Calling the function to fetch more images for the current search query and page
 });
 
