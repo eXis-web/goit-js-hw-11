@@ -42,9 +42,9 @@ function clearGallery() {
 
 // Async function to fetch images from the Pixabay API
 async function getImages(searchQuery, page) {
-    const API_KEY = '37005405-aee23f10e1a9d709a8c5923f1'; // Pixabay API key
-    const BASE_URL = 'https://pixabay.com/api/'; // Pixabay API base URL
-    const perPage = 40; // Number of images per page
+    const API_KEY = '37005405-aee23f10e1a9d709a8c5923f1';
+    const BASE_URL = 'https://pixabay.com/api/'; 
+    const perPage = 40; 
 
     try {
         const response = await axios.get(`${BASE_URL}?key=${API_KEY}&q=${encodeURIComponent(searchQuery)}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`); // Making a GET request to the Pixabay API
