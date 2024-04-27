@@ -37,7 +37,7 @@ loadMoreBtn.addEventListener('click', function () {
 
 // Function to clear the gallery container
 function clearGallery() {
-    gallery.innerHTML = ''; // Removing all child elements from the gallery container
+    gallery.innerHTML = '';
 }
 
 // Async function to fetch images from the Pixabay API
