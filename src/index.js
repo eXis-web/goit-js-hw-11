@@ -48,7 +48,7 @@ async function getImages(searchQuery, page) {
 
     try {
         const response = await axios.get(`${BASE_URL}?key=${API_KEY}&q=${encodeURIComponent(searchQuery)}&image_type=photo&orientation=horizontal&safesearch=true&page=${page}&per_page=${perPage}`); // Making a GET request to the Pixabay API
-        const data = response.data; // Getting the response data
+        const data = response.data;
 
         if (data.hits.length === 0) {
             Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.'); // Displaying a failure notification if no images were found
@@ -57,13 +57,13 @@ async function getImages(searchQuery, page) {
 
             data.hits.forEach(async image => {
                 // Looping through each image in the response data
-                const imageURL = image.webformatURL; // Getting the URL of the image
-                const largeImageURL = image.largeImageURL; // Getting the URL of the large image
-                const altTxt = image.tags; // Getting the alt text for the image (tags)
-                const likes = image.likes; // Getting the number of likes for the image
-                const views = image.views; // Getting the number of views for the image
-                const comments = image.comments; // Getting the number of comments for the image
-                const downloads = image.downloads; // Getting the number of downloads for the image
+                const imageURL = image.webformatURL; 
+                const largeImageURL = image.largeImageURL;
+                const altTxt = image.tags; 
+                const likes = image.likes;
+                const views = image.views; 
+                const comments = image.comments;
+                const downloads = image.downloads;
 
                 await renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments, downloads); // Rendering the image card for each image
             });
