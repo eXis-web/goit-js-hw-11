@@ -70,12 +70,12 @@ async function getImages(searchQuery, page) {
 
             if (page >= totalPages) {
                 loadMoreBtn.style.display = 'none'; // Hiding the "Load more" button if all pages have been loaded
-                Notiflix.Notify.info("We're sorry, but you've reached the end of search results."); // Displaying an info notification when reaching the end of search results
+                Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
             } else {
-                loadMoreBtn.style.display = 'block'; // Showing the "Load more" button if there are more pages to load
+                loadMoreBtn.style.display = 'block'; 
             }
 
-            lightbox.refresh(); // Refreshing the SimpleLightbox instance to include newly added images
+            lightbox.refresh(); 
         }
     } catch (error) {
         Notiflix.Notify.failure('An error occurred while fetching images. Please try again.'); // Displaying a failure notification if an error occurred during image fetching
