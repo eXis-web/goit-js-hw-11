@@ -65,11 +65,11 @@ async function getImages(searchQuery, page) {
                 const comments = image.comments;
                 const downloads = image.downloads;
 
-                await renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments, downloads); // Rendering the image card for each image
+                await renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments, downloads); 
             });
 
             if (page >= totalPages) {
-                loadMoreBtn.style.display = 'none'; // Hiding the "Load more" button if all pages have been loaded
+                loadMoreBtn.style.display = 'none'; 
                 Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
             } else {
                 loadMoreBtn.style.display = 'block'; 
@@ -78,7 +78,7 @@ async function getImages(searchQuery, page) {
             lightbox.refresh(); 
         }
     } catch (error) {
-        Notiflix.Notify.failure('An error occurred while fetching images. Please try again.'); // Displaying a failure notification if an error occurred during image fetching
+        Notiflix.Notify.failure('An error occurred while fetching images. Please try again.'); 
     }
 }
 
@@ -91,8 +91,8 @@ function renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments
     imageLink.href = largeImageURL; // Setting the href attribute to the URL of the large image
 
     const image = document.createElement('img'); // Creating an image element
-    image.src = imageURL; // Setting the src attribute to the URL of the image
-    image.alt = altTxt; // Setting the alt attribute to the alt text of the image
+    image.src = imageURL;
+    image.alt = altTxt;
     image.loading = 'lazy'; // Setting the loading attribute to 'lazy' for lazy loading images
 
     imageLink.appendChild(image); // Appending the image to the anchor element
