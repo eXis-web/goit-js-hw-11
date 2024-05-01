@@ -84,21 +84,21 @@ async function getImages(searchQuery, page) {
 
 // Function to render an image card with information
 function renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments, downloads) {
-    const photoCard = document.createElement('div'); // Creating a div element for the photo card
-    photoCard.classList.add('photo-card'); // Adding the 'photo-card' class to the div element
+    const photoCard = document.createElement('div'); 
+    photoCard.classList.add('photo-card'); 
 
-    const imageLink = document.createElement('a'); // Creating an anchor element for the image
-    imageLink.href = largeImageURL; // Setting the href attribute to the URL of the large image
+    const imageLink = document.createElement('a'); 
+    imageLink.href = largeImageURL; 
 
-    const image = document.createElement('img'); // Creating an image element
+    const image = document.createElement('img'); 
     image.src = imageURL;
     image.alt = altTxt;
-    image.loading = 'lazy'; // Setting the loading attribute to 'lazy' for lazy loading images
+    image.loading = 'lazy'; 
 
-    imageLink.appendChild(image); // Appending the image to the anchor element
+    imageLink.appendChild(image); 
 
-    const infoDiv = document.createElement('div'); // Creating a div element for image information
-    infoDiv.classList.add('info'); // Adding the 'info' class to the div element
+    const infoDiv = document.createElement('div'); 
+    infoDiv.classList.add('info'); 
 
     // Creating paragraphs for different image information
     const likesParagraph = createInfoParagraph('Likes', likes);
