@@ -122,11 +122,11 @@ function renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments
 
 // Function to create a paragraph for image information
 function createInfoParagraph(label, value) {
-    const paragraph = document.createElement('p'); // Creating a paragraph element
-    paragraph.classList.add('info-item'); // Adding the 'info-item' class to the paragraph element
-    paragraph.innerHTML = `<b>${label}</b>: ${value}`; // Setting the inner HTML of the paragraph with label and value
+    const paragraph = document.createElement('p');
+    paragraph.classList.add('info-item'); 
+    paragraph.innerHTML = `<b>${label}</b>: ${value}`;
 
-    return paragraph; // Returning the created paragraph element
+    return paragraph; 
 }
 
 //Created with love to coding
