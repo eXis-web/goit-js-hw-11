@@ -106,17 +106,17 @@ function renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments
     const commentsParagraph = createInfoParagraph('Comments', comments);
     const downloadsParagraph = createInfoParagraph('Downloads', downloads);
 
-    // Appending paragraphs to the info div
+
     infoDiv.appendChild(likesParagraph);
     infoDiv.appendChild(viewsParagraph);
     infoDiv.appendChild(commentsParagraph);
     infoDiv.appendChild(downloadsParagraph);
 
-    // Appending image link and info div to the photo card
+
     photoCard.appendChild(imageLink);
     photoCard.appendChild(infoDiv);
 
-    // Appending the photo card to the gallery container
+
     gallery.appendChild(photoCard);
 }
 
@@ -128,5 +128,3 @@ function createInfoParagraph(label, value) {
 
     return paragraph; 
 }
-
-//Created with love to coding
