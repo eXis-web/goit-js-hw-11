@@ -51,9 +51,9 @@ async function getImages(searchQuery, page) {
         const data = response.data;
 
         if (data.hits.length === 0) {
-            Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.'); // Displaying a failure notification if no images were found
+            Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.'); 
         } else {
-            totalPages = Math.ceil(data.totalHits / perPage); // Calculating the total number of pages based on the total hits from the API response
+            totalPages = Math.ceil(data.totalHits / perPage);
 
             data.hits.forEach(async image => {
                 // Looping through each image in the response data
