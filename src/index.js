@@ -24,9 +24,9 @@ searchForm.addEventListener('submit', function (event) {
         return;
     }
 
-    clearGallery(); // Clearing the gallery before fetching new images
-    page = 1; // Resetting the page number to 1
-    getImages(searchQuery, page); // Calling the function to fetch images with the provided search query
+    clearGallery(); 
+    page = 1; 
+    getImages(searchQuery, page);
 });
 
 // Event listener for the "Load more" button click
@@ -56,7 +56,6 @@ async function getImages(searchQuery, page) {
             totalPages = Math.ceil(data.totalHits / perPage);
 
             data.hits.forEach(async image => {
-                // Looping through each image in the response data
                 const imageURL = image.webformatURL; 
                 const largeImageURL = image.largeImageURL;
                 const altTxt = image.tags; 
