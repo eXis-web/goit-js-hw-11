@@ -11,16 +11,16 @@ let searchQuery = '';
 let page = 1;
 let totalPages = 0;
 
-const lightbox = new SimpleLightbox('.gallery a'); // Initializing SimpleLightbox for the gallery images
+const lightbox = new SimpleLightbox('.gallery a'); 
 
 // Event listener for the search form submission
 searchForm.addEventListener('submit', function (event) {
-    event.preventDefault(); // Preventing the default form submission behavior
+    event.preventDefault(); 
 
-    searchQuery = searchForm.elements.searchQuery.value.trim(); // Getting the search query from the form input
+    searchQuery = searchForm.elements.searchQuery.value.trim(); 
 
     if (searchQuery === '') {
-        Notiflix.Notify.warning('Please enter a search query.'); // Displaying a warning notification if the search query is empty
+        Notiflix.Notify.warning('Please enter a search query.'); 
         return;
     }
 
@@ -32,7 +32,7 @@ searchForm.addEventListener('submit', function (event) {
 // Event listener for the "Load more" button click
 loadMoreBtn.addEventListener('click', function () {
     page++;
-    getImages(searchQuery, page); // Calling the function to fetch more images for the current search query and page
+    getImages(searchQuery, page); 
 });
 
 // Function to clear the gallery container
