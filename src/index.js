@@ -3,9 +3,9 @@ import axios from 'axios';
 import SimpleLightbox from "simplelightbox"; 
 import "simplelightbox/dist/simple-lightbox.min.css"; 
 
-const searchForm = document.querySelector('.search-form'); // Selecting the search form element
-const gallery = document.querySelector('.gallery'); // Selecting the gallery container element
-const loadMoreBtn = document.querySelector('.load-more'); // Selecting the "Load more" button element
+const searchForm = document.querySelector('.search-form'); 
+const gallery = document.querySelector('.gallery'); 
+const loadMoreBtn = document.querySelector('.load-more'); 
 
 let searchQuery = '';
 let page = 1;
