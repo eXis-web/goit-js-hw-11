@@ -34,13 +34,11 @@ body {
     border-color: #00b6ee;
 }
 
-/* Styles for image in card */
 .photo-card img {
     width: 100%;
     height: auto;
 }
 
-/* Styles for information in card */
 .info {
     padding: 10px;
     background-color: #00b6ee;
