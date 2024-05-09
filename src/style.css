@@ -6,7 +6,6 @@
     grid-gap: 20px;
 }
 
-/* Styles for the header */
 .header {
     position: absolute;
     top: 25px;
@@ -18,12 +17,10 @@
     font-weight: bold;
 }
 
-/* Styles for text */
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Styles for photo card */
 .photo-card {
     background-color: #00b6ee;
     display: flex;
