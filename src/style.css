@@ -48,7 +48,6 @@ body {
     color: #666;
 }
 
-/* Styles for search form */
 .search-form {
     background-color: #007bff;
     padding: 15px;
@@ -90,7 +89,6 @@ body {
     outline: none;
 }
 
-/* Styles for load more button */
 .loadmore-button {
     margin-top: 7px;
     display: flex;
@@ -98,7 +96,7 @@ body {
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-/*Hover load-more-btn styles*/
+
 .load-more {
     width: 300px;
     height: 50px;
@@ -115,7 +113,6 @@ body {
     background-color: #fbff00;
 }
 
-/* Styles for hover effect on photo card */
 .photo-card:hover {
     box-shadow: 0 8px 16px hwb(214 0% 21%);
     transition: box-shadow 0.3s ease;
