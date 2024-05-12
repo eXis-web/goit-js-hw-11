@@ -81,7 +81,6 @@ async function getImages(searchQuery, page) {
     }
 }
 
-// Function to render an image card with information
 function renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments, downloads) {
     const photoCard = document.createElement('div'); 
     photoCard.classList.add('photo-card'); 
