@@ -13,7 +13,6 @@ let totalPages = 0;
 
 const lightbox = new SimpleLightbox('.gallery a'); 
 
-// Event listener for the search form submission
 searchForm.addEventListener('submit', function (event) {
     event.preventDefault(); 
 
