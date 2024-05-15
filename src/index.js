@@ -28,13 +28,13 @@ searchForm.addEventListener('submit', function (event) {
     getImages(searchQuery, page);
 });
 
-// Event listener for the "Load more" button click
+
 loadMoreBtn.addEventListener('click', function () {
     page++;
     getImages(searchQuery, page); 
 });
 
-// Function to clear the gallery container
+
 function clearGallery() {
     gallery.innerHTML = '';
 }
