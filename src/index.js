@@ -39,7 +39,6 @@ function clearGallery() {
     gallery.innerHTML = '';
 }
 
-// Async function to fetch images from the Pixabay API
 async function getImages(searchQuery, page) {
     const API_KEY = '37005405-aee23f10e1a9d709a8c5923f1';
     const BASE_URL = 'https://pixabay.com/api/'; 
@@ -97,7 +96,6 @@ function renderImageCard(imageURL, largeImageURL, altTxt, likes, views, comments
     const infoDiv = document.createElement('div'); 
     infoDiv.classList.add('info'); 
 
-    // Creating paragraphs for different image information
     const likesParagraph = createInfoParagraph('Likes', likes);
     const viewsParagraph = createInfoParagraph('Views', views);
     const commentsParagraph = createInfoParagraph('Comments', comments);
